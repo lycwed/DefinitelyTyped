@@ -526,6 +526,14 @@ declare namespace CodeMirror {
 
         /** Fires when the overwrite flag is flipped. */
         on(eventName: "overwriteToggle", handler: (instance: CodeMirror.Editor, overwrite: boolean) => void): void;
+        
+        /** Fires when a keydown event fires. */
+        on(eventName: "keydown", handler: (instance: CodeMirror.Editor, event: KeyboardEvent) => void): void;
+        off(eventName: "keydown", handler: (instance: CodeMirror.Editor, event: KeyboardEvent) => void): void;
+
+        /** Fires when a keyup event fires. */
+        on(eventName: "keyup", handler: (instance: CodeMirror.Editor, event: KeyboardEvent) => void): void;
+        off(eventName: "keyup", handler: (instance: CodeMirror.Editor, event: KeyboardEvent) => void): void;
 
         /** Events are registered with the on method (and removed with the off method).
         These are the events that fire on the instance object. The name of the event is followed by the arguments that will be passed to the handler.
